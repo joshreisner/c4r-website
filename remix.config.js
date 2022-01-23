@@ -7,5 +7,15 @@ module.exports = {
   publicPath: "/build/",
   serverBuildDirectory: "netlify/functions/server/build",
   devServerPort: 8002,
-  ignoredRouteFiles: [".*"]
+  ignoredRouteFiles: [".*"],
+  mdx: async (filename) => {
+    const [remarkToc, rehypeSlug] = await Promise.all([
+      import("remark-toc").then((mod) => mod.default),
+      import("rehype-slug").then((mod) => mod.default),
+    ]);
+    return {
+      remarkPlugins: [remarkToc],
+      rehypePlugins: [rehypeSlug],
+    };
+  },
 };
