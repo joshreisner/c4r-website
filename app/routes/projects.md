@@ -126,16 +126,3 @@ This project takes a Meeting Guide-spec JSON feed and generates a printable PDF 
 Project description to come
 
 - Links to come
-
-&nbsp;
-
----
-
-&nbsp;
-
-### Sheets `Production`
-
-This project fetches meeting data from Google Sheets using the `v4` API and transforms it into a CORS-enabled minified Meeting Guide-spec JSON file. Currently in use by [Online Intergroup](https://aa-intergroup.org/meetings) and [Santa Clara County AA](https://aasanjose.org/meetings).
-
-- [Log in](https://sheets.code4recovery.org)
-- [Source code](https://github.com/code4recovery/sheets) (PHP / Laravel)
